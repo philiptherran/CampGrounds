@@ -1,0 +1,20 @@
+<% include ../partials/header.ejs%>
+<div class="container">
+    <div class="text-center">
+        <h1> Add new comment to <%= campGround.name%></h1>
+    </div>
+    <div class="row justify-content-center">
+         <form action="/campgrounds/<%=campGround._id%>/comments" method="POST">
+            <div class="form-group">
+                <input class="form-control" type="text" name="comment[text]" placeholder="text">
+            </div>
+            <div>
+                <button class="btn btn-primary btn-block">Submit</button>
+            </div>
+            <a href="/campgrounds">go back</a>
+        </form>
+        
+    </div>
+</div>
+
+<% include ../partials/footer.ejs %>
