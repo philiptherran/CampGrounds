@@ -11,9 +11,10 @@ var campGroundRoutes = require("./routes/campgrounds.js");
 var commentRoutes = require("./routes/comments.js");
 var indexRoutes = require("./routes/index.js");
 
-//mongoose.connect("mongodb://localhost:27017/yelpcamp");
-mongoose.connect("mongodb://philiptherran:PasteL0127@ds115762.mlab.com:15762/dbcamping");
-//mongodb://philiptherran:PasteL0127@ds115762.mlab.com:15762/dbcamping
+console.log(process.env.DATABASEURL);
+mongoose.connect(process.env.DATABASEURL);
+//mongoose.connect("mongodb://philiptherran:PasteL0127@ds115762.mlab.com:15762/dbcamping");
+
 
 var app = express();
 
