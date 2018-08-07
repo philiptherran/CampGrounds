@@ -13,8 +13,6 @@ var indexRoutes = require("./routes/index.js");
 
 console.log(process.env.DATABASEURL);
 mongoose.connect(process.env.DATABASEURL);
-//mongoose.connect("mongodb://philiptherran:PasteL0127@ds115762.mlab.com:15762/dbcamping");
-
 
 var app = express();
 
