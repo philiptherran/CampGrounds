@@ -20,7 +20,7 @@ router.post("/register", function(req, res) {
                     req.flash('success', 'Successfully registered');
                     res.redirect("/campgrounds");   
              });
-         }if(err){
+         }else{
               req.flash('warning', err.message);
               console.log(err.message);
               return res.redirect("/register");
@@ -37,9 +37,8 @@ router.post("/login", passport.authenticate("local",
     {
         successRedirect: "/campgrounds",
         failureRedirect: "/login"
-    }), function(req, res) {
-        return;
-});
+    })
+);
 
 router.get("/logout", function(req, res) {
     req.logout();

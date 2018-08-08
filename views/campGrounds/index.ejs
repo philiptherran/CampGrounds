@@ -1,33 +1,34 @@
 <% include ../partials/header.ejs%>
 
-<div class="container">
-    <header class="jumbotron">
+<main class="container">
+    <div class="jumbotron text-center">
         <div class="container">
-            <h3>Welcome to the CampGrounds</h3>
-            <p> campgrounds from all the wordl! </p>
+            <h1 class="jumbotron-heading">CampGrounds</h1>
+            <p class="lead text-muted"> learn about how tthe people camping from places of all the world</p>
             <p>
-                <a class="btn btn-primary btn-sm" href="/campgrounds/new"> Add new campGround </a>
+                <a class="btn btn-primary btn-sm my-2" href="/campgrounds/new"> Add new campGround </a>
             </p>
-        </div>
-    </header>
-    
-    <div class="row">
-        <% campGrounds.forEach(function(campGround){%>
-            <div class="col-md-3 col-sm-6 img-fluid">
-                <div class="card mb-4 shadow-sm ">
-                    <img class="card-img-top img-thumbnail" src="<%= campGround.image%>">
-                    <div class="card-body">
-                        <h5 class="card-text text-sm-center"><%= campGround.name%></h5>
-                    </div>
-                    <div class="d-flex justify-content-center">
-                        <a href="/campgrounds/<%=campGround._id%>" class="btn btn-primary">More info</a>
-                    </div>
-                </div>
-            
-            </div>
-        <%});%>
+        </div>    
     </div>
     
-<div>
+    <div class="album">    
+        <div class="row">
+            <% campGrounds.forEach(function(campGround){%>
+                <div class="card-group col-md-4 col-sm-6 ">
+                    <div class="card mb-4 shadow-sm bg-light" >
+                        <img class="card-img-top img-thumbnail equals bg-light" src="<%= campGround.image%>">
+                        <div class="card-body">
+                            <h5 class="card-text text-sm-center"><%= campGround.name%></h5>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <a href="/campgrounds/<%=campGround._id%>" class="btn btn-primary">More info</a>
+                        </div>
+                    </div>
+                
+                </div>
+            <%});%>
+        </div>
+    </div>    
+</main>
 
 <% include ../partials/footer.ejs%>
