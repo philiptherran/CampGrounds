@@ -1,3 +1,4 @@
+
 #separation{
     margin-top: 9px;
 }
@@ -21,4 +22,52 @@
   height: auto;
   padding: 10px;
   font-size: 16px;
+}
+
+div.item i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  font-size: 34px;
+  color: #000000;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  background: #ffffff;
+}
+
+div.item.blue {
+  background-color: #34495e;
+}
+
+div.item.blue i {
+  color: #34495e;
+}
+
+div.item {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  background: #000000;
+  text-align: center;
+}
+
+div.item:hover img {
+  opacity: 0.3;
+  filter: grayscale(100%);
+}
+
+div.item * {
+  transition: all .35s ease-in-out;
+}
+
+div.item i {
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 300ms 0ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+div.item:hover i {
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 300ms 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }

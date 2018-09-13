@@ -16,7 +16,10 @@
             <% campGrounds.forEach(function(campGround){%>
                 <div class="card-group col-md-4 col-sm-6 ">
                     <div class="card mb-4 shadow-sm bg-light" >
-                        <img class="card-img-top img-thumbnail equals bg-light" src="<%= campGround.image%>">
+                        <div class="item blue">
+                            <img class="card-img-top img-thumbnail equals bg-light" src="<%= campGround.image%>">
+                            <i class="fas fa-camera-retro"></i>
+                        </div>    
                         <div class="card-body">
                             <h5 class="card-text text-sm-center"><%= campGround.name%></h5>
                         </div>
